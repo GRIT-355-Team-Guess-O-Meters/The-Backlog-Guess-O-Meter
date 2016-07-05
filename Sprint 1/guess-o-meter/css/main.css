@@ -1,4 +1,13 @@
 
-h1, h2, h3, h4, .btn {
+h1, h2, h3, h4 {
   font-family: 'Fredericka the Great', cursive;
+  color: #827717;
+}
+
+.btn {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.clearfix {
+  overflow: auto;
 }
