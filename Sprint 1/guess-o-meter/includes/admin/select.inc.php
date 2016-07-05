@@ -4,7 +4,7 @@
   * in the database and posts them on the admin page.
   */
 
-    $sql = "SELECT project_id, project_name, date_created FROM tb_projects";
+    $sql = "SELECT project_id, project_name, date_created FROM tb_projects ORDER BY date_created DESC";
 
     $statement = $dbh->prepare($sql);
 

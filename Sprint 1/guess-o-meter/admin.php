@@ -1,4 +1,9 @@
-<?php include_once './includes/db.inc.php';
+<?php
+      /**
+      * Include files
+      */
+
+      include_once './includes/db.inc.php';
       include_once './includes/admin/insert.inc.php';
       include_once './includes/admin/select.inc.php';
       include_once './includes/admin/delete.inc.php';
@@ -38,16 +43,8 @@
           <h3 class="center-align">Existing Projects</h3>
           <hr />
             <table class="striped bordered centered">
-              <?php
-                foreach ($result as $row) {
-                  echo
-                  "<tr>
-                    <td>".$row['project_name']."</td>
-                    <td>".$row['date_created']."</td>
-                    <td><a class='waves-effect waves-light btn lime darken-4' href='features.php#/" . $row['project_id'] . "'>Open</a></td>
-                  </tr>";
-                }
-              ?>
+              <!--Dynamicly displays table from database-->
+              <?php include_once "./includes/admin/show-table.inc.php"; ?>
             </table>
             <br />
         </div>
