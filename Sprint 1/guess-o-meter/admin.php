@@ -1,4 +1,7 @@
 <?php
+      // Start the session
+      session_start();
+
       /**
       * Include files
       */

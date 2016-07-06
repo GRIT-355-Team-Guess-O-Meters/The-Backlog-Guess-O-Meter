@@ -1,4 +1,7 @@
-<?php include_once './includes/db.inc.php';
+<?php
+  // Start the session
+  session_start();
+  include_once './includes/db.inc.php';
 ?>
 <!DOCTYPE html>
 <html ng-app="featuresPage">
@@ -32,8 +35,8 @@
             <label for="add_feature">Add Feature:</label>
             <input id="add_feature" class="col s10 offset-s1" type="text" />
             <div class="col s6 offset-s3">
-                <input class="col s5 btn deep-purple darken-2" type="submit" value="Add More Features" name="submit" />
-                <input class="col s5 offset-s1 btn teal darken-2" type="submit" value="Submit Feature List" name="submit" />
+                <input class="col s5 btn deep-purple darken-2" type="submit" value="Add More" name="submit" />
+                <input class="col s5 offset-s1 btn teal darken-2" type="submit" value="Submit" name="submit" />
                 <br />
                 <br />
             </div>

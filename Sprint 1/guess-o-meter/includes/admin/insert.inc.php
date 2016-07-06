@@ -26,7 +26,11 @@
 
       $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-      header('Location: features.php#/'. $row['project_id'] . '');
+      $projectId = $row['project_id'];
+
+      $_SESSION['project_id'] = $projectId;
+
+      header('Location: features.php#/'. $projectId . '');
 
     }
   }
