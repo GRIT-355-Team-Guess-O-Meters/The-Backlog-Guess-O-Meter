@@ -31,6 +31,7 @@
       $_SESSION['project_id'] = $projectId;
 
       header('Location: features.php#/'. $projectId . '');
+      die;
 
     }
   }
