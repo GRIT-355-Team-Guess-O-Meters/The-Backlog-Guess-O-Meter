@@ -4,6 +4,14 @@
   * from the admin page into the database.
   */
 
+  //if a user goes back to the projects page
+  //the session for the project id is ueset
+  if(isset($_SESSION['projectid'])){
+
+    unset($_SESSION['projectid']);
+
+  }
+
   if(isset($_POST['submit'])){
     if(isset($_POST['project']) && !empty($_POST['project'])){
 
@@ -28,9 +36,10 @@
 
       $projectId = $row['project_id'];
 
-      $_SESSION['project_id'] = $projectId;
+      $_SESSION['projectid'] = $projectId;
 
-      header('Location: features.php#/'. $projectId . '');
+      header('Location: features.php#/' . $projectId . '');
+      exit;
 
     }
   }

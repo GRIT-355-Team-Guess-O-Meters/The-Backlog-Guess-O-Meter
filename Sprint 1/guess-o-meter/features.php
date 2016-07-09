@@ -2,6 +2,8 @@
   // Start the session
   session_start();
   include_once './includes/db.inc.php';
+  include_once './includes/features/select.inc.php';
+
 ?>
 <!DOCTYPE html>
 <html ng-app="featuresPage">
@@ -15,7 +17,7 @@
     <!--Google Font CSS-->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
     <!--Project CSS-->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
   </head>
   <body>
     <div class="container" ng-controller="featuresController">
@@ -23,24 +25,26 @@
       <div class="row">
 
         <div class="card col s10 offset-s1">
-          <h2 class="center-align">Project: cats</h2>
+          <h2 class="center-align">Project: <?php echo $projectName; ?></h2>
 
           <ul class="collection">
-            <li class="collection-item">As a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to login <br /></li>
-            <li class="collection-item">As a user I want to be able to buy thingsAs a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to login  <br /></li>
-            <li class="collection-item">As a user I want to be able to logoutAs a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to loginAs a user I want to be able to login  <br /></li>
+            <?php include_once './includes/features/show-features.php';  ?>
           </ul>
 
-          <form class="input-field" action="" method="post">
-            <label for="add_feature">Add Feature:</label>
-            <input id="add_feature" class="col s10 offset-s1" type="text" />
+          <div class="0">
+            <input placeholder="Add Feature:" class="features card col s7 offset-s1" type="text" />
+            <button class="btn col s2 offset-s1 removeInput" counter="0">Remove</button>
+          </div>
+
+            <div id="dynamicInput"></div>
+
             <div class="col s6 offset-s3">
-                <input class="col s5 btn deep-purple darken-2" type="submit" value="Add More" name="submit" />
-                <input class="col s5 offset-s1 btn teal darken-2" type="submit" value="Submit" name="submit" />
+                <input id="addmore" class="col s5 btn deep-purple darken-2" value="Add More" />
+                <input id="submit" class="col s5 offset-s1 btn teal darken-2" value="Submit" />
                 <br />
                 <br />
             </div>
-          </form>
+
         </div>
       </div>
     </div>
