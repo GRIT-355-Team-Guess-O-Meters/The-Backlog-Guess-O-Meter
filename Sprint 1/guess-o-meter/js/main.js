@@ -14,9 +14,12 @@ $( document ).ready(function() {
 
     $('#addmore').click(function(){
 
-        var input = '<div class="' + addMoreCounter + '">' +
-                        '<input placeholder="Add Feature:" class="features card col s7 offset-s1" type="text" />' +
-                        '<button class="btn col s2 offset-s1 removeInput" counter="' + addMoreCounter + '">Remove</button>' +
+        var input = '<div class="' + addMoreCounter + ' valign-wrapper">' +
+                        '<div class="card col s7 offset-s1">' +
+                            '<input placeholder="Add Feature Name:" class="featureName" type="text" />' +
+                            '<textarea placeholder="Add Feature Description:" class="featureDesc"></textarea>' +
+                        '</div>' +
+                        '<button class="btn col s2 offset-s1 removeInput valign" counter="' + addMoreCounter + '">Remove</button>' +
                     '</div>';
 
         $('#dynamicInput').append(input);
@@ -43,7 +46,8 @@ $( document ).ready(function() {
 
 
     $('#submit').click(function(){
-        var allInputs = $('.features').map(function(){
+
+        var allFeatureNameInputs = $('.featureName').map(function(){
 
             if($(this).val()){
                 return $(this).val();
@@ -51,7 +55,23 @@ $( document ).ready(function() {
 
         }).get();
 
-        $.post('includes/ajax/insertFeatures.php', {featuresArr:allInputs}, function(data){
+        var allFeatureDescInputs = $('.featureDesc').map(function(){
+
+
+                return $(this).val();
+
+
+        }).get();
+
+        $.post('includes/ajax/insertFeatures.php', {featuresNameArr:allFeatureNameInputs, featuresDescArr:allFeatureDescInputs}, function(data){
+            window.location.reload();
+        });
+    });
+
+    $('#delete').click(function(){
+        var feature_Id = $(this).attr('feature-id');
+
+        $.post('includes/ajax/deleteFeature.php', {featureid:feature_Id}, function(data){
             window.location.reload();
         });
     });
