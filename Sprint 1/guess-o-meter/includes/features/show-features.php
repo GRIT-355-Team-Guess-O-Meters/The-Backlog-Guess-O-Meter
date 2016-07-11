@@ -1,6 +1,6 @@
 <?php
 
-    $sql = "SELECT feature_name FROM tb_features WHERE project_id = :projectid";
+    $sql = "SELECT feature_name, feature_desc, feature_id FROM tb_features WHERE project_id = :projectid";
 
     $statement = $dbh->prepare($sql);
 
@@ -12,7 +12,7 @@
 
     foreach ($result as $row) {
       echo
-      "<li class='collection-item'>" . $row['feature_name'] . "</li>";
+      "<li class='collection-item row valign-wrapper'><div class='col s10 valign'><h6>" . $row['feature_name'] . "</h6> <p>" . $row['feature_desc'] . "</p></div><button feature-id='" . $row['feature_id'] . "' class='delete col s2 btn' >Delete</button></button></li>";
     }
 
  ?>

@@ -27,13 +27,20 @@
         <div class="card col s10 offset-s1">
           <h2 class="center-align">Project: <?php echo $projectName; ?></h2>
 
-          <ul class="collection">
+          <ul id="feature-list" class="collection">
             <?php include_once './includes/features/show-features.php';  ?>
           </ul>
 
-          <div class="0">
-            <input placeholder="Add Feature:" class="features card col s7 offset-s1" type="text" />
-            <button class="btn col s2 offset-s1 removeInput" counter="0">Remove</button>
+          <div class="0 valign-wrapper">
+            <div class="col s7 offset-s1">
+              <fieldset>
+                 <legend>Add Feature:</legend>
+                 <input placeholder="Add Feature Name:" class="featureName" type="text" />
+                <textarea placeholder="Add Feature Description:" class="featureDesc"></textarea>
+              </fieldset>
+              <br>
+            </div>
+            <button class="btn col s2 offset-s1 removeInput valign" counter="0">Remove</button>
           </div>
 
             <div id="dynamicInput"></div>

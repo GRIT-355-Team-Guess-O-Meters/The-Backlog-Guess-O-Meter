@@ -43,7 +43,7 @@
         <div class="card col s12">
           <h3 class="center-align">Existing Projects</h3>
           <hr />
-            <table class="striped bordered centered">
+            <table id="project-list" class="striped bordered centered">
               <!--Dynamicly displays table from database-->
               <?php include_once "./includes/admin/show-table.inc.php"; ?>
             </table>

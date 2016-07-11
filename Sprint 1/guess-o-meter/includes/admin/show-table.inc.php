@@ -9,29 +9,15 @@
 
 
   foreach ($result as $row) {
-//get the status
-//if($status = "Open") {
 
-/*echo '<div class="switch">
-    <label>
-      Off
-      <input type="checkbox" checked>
-      <span class="lever"></span>
-      On
-    </label>
-  </div>
-';
-}else{
-echo '<div class="switch">
-    <label>
-      Off
-      <input type="checkbox">
-      <span class="lever"></span>
-      On
-    </label>
-  </div>';
-}*/
+    $color = '';
+    if($row['status'] == 'Start'){
+      $color = 'green darken-3';
+    }
 
+    if($row['status'] == 'Stop'){
+      $color = 'red accent-3';
+    }
 
     echo
 
@@ -43,7 +29,9 @@ echo '<div class="switch">
 
       <td><a class='openBtn waves-effect waves-light btn lime darken-4' project-id='" . $row['project_id'] . "'>Open</a></td>
 
-      <td><button class='waves-effect waves-light btn lime darken-4'>" . $row['status'] . "</button></td>
+      <td><a class='deleteProject waves-effect waves-light btn lime darken-4' project-id='" . $row['project_id'] . "'>Delete</a></td>
+
+      <td><button class='statusBtn waves-effect waves-light btn " . $color . "' project-id='" . $row['project_id'] . "'>" . $row['status'] . "</button></td>
 
     </tr>";
 
