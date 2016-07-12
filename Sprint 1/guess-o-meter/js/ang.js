@@ -20,12 +20,12 @@ estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http'
       'projectid' : $routeParams.projectid
     }
   });
-
   request.then(function(response){
     $scope.projectname = response.data[0];
     $scope.results = [];
 
     for(var i = 1; i < response.data.length; i++){
+
       $scope.results.push(response.data[i]);
     }
   });
