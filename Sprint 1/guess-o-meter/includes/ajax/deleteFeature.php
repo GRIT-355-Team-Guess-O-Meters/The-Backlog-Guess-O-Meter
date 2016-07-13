@@ -1,4 +1,6 @@
 <?php
+        //This script deletess single features from the database
+
         include_once '../db.inc.php';
         session_start();
 

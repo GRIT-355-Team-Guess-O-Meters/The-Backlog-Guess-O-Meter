@@ -1,4 +1,6 @@
 <?php
+  //this script deletes projects and all features releated to the project from the database.
+
   include_once '../db.inc.php';
   session_start();
 

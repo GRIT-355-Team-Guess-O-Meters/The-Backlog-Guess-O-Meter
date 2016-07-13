@@ -1,4 +1,7 @@
 <?php
+
+      //this script is used to updata the status of the status on Mysql
+      
       include_once '../db.inc.php';
       session_start();
 

@@ -1,7 +1,11 @@
-var addMoreCounter = 1;
-var project_Id = '';
+var addMoreCounter = 1; //adds counter for the dynamic form builder.
+
+var project_Id = '';//golobalizing the project_Id variable because it has 2 scopes
+
+//when page is ready run this code
 $(document).ready(function() {
 
+    //when .openBtn is clicked project id for that project is stored into the session
     $('.openBtn').click(function() {
         project_Id = $(this).attr('project-id');
         $.post('includes/ajax/setSession.php', {
@@ -11,6 +15,8 @@ $(document).ready(function() {
         });
     });
 
+    //When .statusBtn is clicked status is changed and toggled to its oposite
+    //also the database is changed as well.
     $('.statusBtn').click(function() {
         var project_Id = $(this).attr('project-id');
         var status = $('.statusBtn[project-id = "' + project_Id + '"]').text();
@@ -22,6 +28,8 @@ $(document).ready(function() {
         });
     });
 
+    //When add more button is clicked on the features page it dynamicly creates more
+    //forms for user to add more features.
     $('#addmore').click(function() {
         var input = '<div class="' + addMoreCounter + ' valign-wrapper">' +
             '<div class="col s7 offset-s1">' +
@@ -42,6 +50,7 @@ $(document).ready(function() {
         });
     });
 
+    //when remove button is clicked on the features page it removes a add feature form input.
     $('.removeInput').click(function() {
         var thisDiv = $(this).attr('counter');
 
@@ -49,17 +58,23 @@ $(document).ready(function() {
 
     });
 
+    //when sumbit button on the features page is called it summites the page and stores
+    //all the data into the datanase.
     $('#submit').click(function() {
+
+        //Adds all the feature that share the same name as .featurename to a array
         var allFeatureNameInputs = $('.featureName').map(function() {
             if ($(this).val()) {
                 return $(this).val();
             }
         }).get();
 
+        //Adds all the feature that share the same name as .featurename to a array
         var allFeatureDescInputs = $('.featureDesc').map(function() {
             return $(this).val();
         }).get();
 
+        //Adds all features and posts it through ajax and stored in the database. (working on changing this)
         $.post('includes/ajax/insertFeatures.php', {
             featuresNameArr: allFeatureNameInputs,
             featuresDescArr: allFeatureDescInputs
@@ -68,6 +83,7 @@ $(document).ready(function() {
         });
     });
 
+    //when the delete button is clicked deletes feature from database
     $('.delete').click(function() {
         var feature_Id = $(this).attr('feature-id');
 
@@ -78,6 +94,7 @@ $(document).ready(function() {
         });
     });
 
+    //when deleteProject is clicked it deletes that project and all of its features from the database.
     $('.deleteProject').click(function(){
         var project_Id = $(this).attr('project-id');
 

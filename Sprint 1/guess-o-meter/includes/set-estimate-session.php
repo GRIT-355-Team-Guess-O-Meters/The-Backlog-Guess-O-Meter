@@ -9,6 +9,7 @@
   include_once './db.inc.php';
   include_once './features/select.inc.php';
 
+  //database query that gets the feature table
   $sql = "SELECT feature_name, feature_desc, feature_id FROM tb_features WHERE project_id = :projectid";
 
   $statement = $dbh->prepare($sql);
@@ -25,6 +26,7 @@
 
   $i = 1;
 
+  //convert table row into multidiminsional array and stored into a data.
   foreach ($result as $row) {
 
     $rows = [];
