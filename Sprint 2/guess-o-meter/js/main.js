@@ -1,30 +1,41 @@
 var addMoreCounter = 1; //adds counter for the dynamic form builder.
 
-var project_Id = '';//golobalizing the project_Id variable because it has 2 scopes
+var projectID = '';//golobalizing the projectID variable because it has 2 scopes
 
 //when page is ready run this code
 $(document).ready(function() {
 
     //when .openBtn is clicked project id for that project is stored into the session
     $('.openBtn').click(function() {
-        project_Id = $(this).attr('project-id');
+        projectID = $(this).attr('project-id');
         $.post('includes/ajax/setSession.php', {
-            projectid: project_Id
+            projectid: projectID
         }, function(data) {
-            window.location = "features.php#/" + project_Id + "";
+            window.location = "features.php#/" + projectID + "";
         });
     });
 
     //When .statusBtn is clicked status is changed and toggled to its oposite
     //also the database is changed as well.
     $('.statusBtn').click(function() {
-        var project_Id = $(this).attr('project-id');
-        var status = $('.statusBtn[project-id = "' + project_Id + '"]').text();
+        var projectID = $(this).attr('project-id');
+        var status = $('.statusBtn[project-id = "' + projectID + '"]').text();
+
         $.post('includes/ajax/updateAdmin.php', {
-            projectid: project_Id,
+            projectid: projectID,
             status: status
         }, function(data) {
-            window.location.reload();
+
+            if(status == 'Start'){
+                if(data){
+                    alert("You must stop a survey before you open a survey.");
+                }else{
+                    window.location = "survey.php";
+                }
+
+            } else {
+                window.location.reload();
+            }
         });
     });
 
@@ -85,10 +96,10 @@ $(document).ready(function() {
 
     //when the delete button is clicked deletes feature from database
     $('.delete').click(function() {
-        var feature_Id = $(this).attr('feature-id');
+        var featureID = $(this).attr('feature-id');
 
         $.post('includes/ajax/deleteFeature.php', {
-            featureid: feature_Id
+            featureid: featureID
         }, function(data) {
             window.location.reload();
         });
@@ -96,14 +107,16 @@ $(document).ready(function() {
 
     //when deleteProject is clicked it deletes that project and all of its features from the database.
     $('.deleteProject').click(function(){
-        var project_Id = $(this).attr('project-id');
+        var projectID = $(this).attr('project-id');
 
         $.post('includes/ajax/deleteProject.php', {
-            projectid: project_Id
+            projectid: projectID
         }, function(data) {
             window.location.reload();
         });
     });
+
+    
 
 
 
