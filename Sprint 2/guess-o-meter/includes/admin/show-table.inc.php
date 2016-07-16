@@ -27,7 +27,7 @@
 
       <td>".$row['date_created']."</td>
 
-      <td><a class='openBtn waves-effect waves-light btn lime darken-4' project-id='" . $row['project_id'] . "'>Edit Features</a></td>
+      <td><a class='openBtn waves-effect waves-light btn lime darken-4' project-id='" . $row['project_id'] . "'>Open</a></td>
 
       <td><a class='deleteProject waves-effect waves-light btn lime darken-4' project-id='" . $row['project_id'] . "'>Delete</a></td>
 

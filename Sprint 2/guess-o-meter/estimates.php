@@ -12,8 +12,8 @@
     <!--Project CSS-->
     <link rel="stylesheet" href="./css/main.css">
   </head>
-  <body class="valign-wrapper">
-    <div class="container valign" ng-view>
+  <body>
+    <div class="container" ng-view>
 
         <!--Content Goes Here-->
 
@@ -30,11 +30,5 @@
   <script src="./js/main.js"></script>
   <!--In Project Angular JS-->
   <script src="./js/ang.js"></script>
-  <script>
-    $(document).ready(function(){
-      var windowHeight = $(window).height();
-      $('body').css('height', windowHeight);
-    });
-  </script>
   </body>
 </html>

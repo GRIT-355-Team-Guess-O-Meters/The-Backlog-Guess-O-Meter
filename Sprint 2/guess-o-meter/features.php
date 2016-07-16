@@ -21,11 +21,7 @@
   </head>
   <body>
     <div class="container" ng-controller="featuresController">
-      <div class="row">
-        <h1 class="col s5">Features</h1>
-        <a class="backToAdmin col s3 btn right" href="admin.php">Return to Admin Page</a>
-      </div>
-
+      <h1>Features</h1>
       <div class="row">
 
         <div class="card col s10 offset-s1">

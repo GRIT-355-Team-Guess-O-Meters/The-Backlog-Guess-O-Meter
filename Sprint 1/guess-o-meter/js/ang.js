@@ -11,8 +11,8 @@ estimatePage.config(function ($routeProvider) {
 
 });
 
-estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http', '$route', function($scope, $routeParams, $http, $route) {
-
+estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+  $scope.currentIndex = 0;
   //Ajax used to make server changed in the database
   var request = $http({
     method : 'POST',
@@ -42,21 +42,37 @@ estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http'
 }
 
 //code still in development not yet done.
-  $scope.addEstimate = function(){
-    if($scope.participantid){
+  $scope.addEstimate = function(e){
+    var featureID = $(e.target).data('feature-id');
+    var participantID = $(e.target).data('participant-id');
+    var estimateValue = Number($(e.target).siblings('.estimate-textbox').val());
 
-      // var request = $http({
-      //   method : 'POST',
-      //   url : 'includes/set-estimates.php',
-      //   data : {
-      //     'projectid' : $routeParams.projectid,
-      //     'featureid' : $(this).attr('featureid')
-      //   }
-      // });
+    if(Number.isInteger(estimateValue) && estimateValue >= 0){
+    //  Ajax used to make server changed in the database
+      var request = $http({
+        method : 'POST',
+        url : 'includes/ajax/set-estimates.php',
+        data : {
+          'projectid' : $routeParams.projectid,
+          'featureid' : featureID,
+          'estimatevalue': estimateValue,
+          'participantid': participantID
+        }
+      });
 
-      alert( $('.estimate').data('feature-id'));
+      //Recives the data back from php
+      request.then(function(response){
+        $scope.currentIndex++;
 
+        //$(e.target).parent().replaceWith("<div class='col s2 offset-s1 valign'><h4 class='center-align'>" + estimateValue + " days</h4></div>");
+      });
+
+    } else {
+      alert('invalid Input');
     }
+
+
+
   }
 
 

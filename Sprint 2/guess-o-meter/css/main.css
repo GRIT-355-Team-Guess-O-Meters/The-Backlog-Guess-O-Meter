@@ -11,14 +11,3 @@ h1, h2, h3, h4, h5, h6 {
 .clearfix {
   overflow: auto;
 }
-
-input.estimate-textbox {
-  width: 88%;
-  padding: 10px;
-  border: solid 1px #dcdcdc;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-
-.backToAdmin {
-  margin-top: 45px;
-}
