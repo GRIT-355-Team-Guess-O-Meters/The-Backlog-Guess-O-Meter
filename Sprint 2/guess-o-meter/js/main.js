@@ -21,22 +21,30 @@ $(document).ready(function() {
         var projectID = $(this).attr('project-id');
         var status = $('.statusBtn[project-id = "' + projectID + '"]').text();
 
-        $.post('includes/ajax/updateAdmin.php', {
-            projectid: projectID,
-            status: status
-        }, function(data) {
+        $.post('includes/ajax/checkStatus.php', {}, function(data){
+            var statusInfo = JSON.parse(data);
 
-            if(status == 'Start'){
-                if(data){
-                    alert("You must stop a survey before you open a survey.");
-                }else{
-                    window.location = "survey.php";
-                }
+            if($.isEmptyObject(statusInfo) || statusInfo[0].project_id == projectID){
+                $.post('includes/ajax/updateAdmin.php', {
+                    projectid: projectID,
+                    status: status
+                }, function(data) {
 
-            } else {
-                window.location.reload();
+                            if($.isEmptyObject(statusInfo)){
+                                window.location = "survey.php#/" + projectID +"";
+
+                            } else {
+                                window.location.reload();
+                            }
+
+
+                });
+            }else{
+                alert('Please stop a suvery before another one is opened.');
             }
         });
+
+
     });
 
     //When add more button is clicked on the features page it dynamicly creates more
@@ -116,7 +124,7 @@ $(document).ready(function() {
         });
     });
 
-    
+
 
 
 

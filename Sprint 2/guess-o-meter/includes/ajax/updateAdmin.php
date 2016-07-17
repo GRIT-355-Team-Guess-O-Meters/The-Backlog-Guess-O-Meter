@@ -5,10 +5,11 @@
       include_once '../db.inc.php';
       session_start();
 
+      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/The-Backlog-Guess-O-Meter/Sprint%202/guess-o-meter/estimates.php#/' . $_POST['projectid'];
+
       echo $_SESSION['surveyid'];
 
       $surveyId = uniqid();
-      $_SESSION['surveyid'] = $surveyId;
 
       $status = '';
 
@@ -50,11 +51,5 @@
             $statement->bindParam(':currentsurveyid', $surveyId, PDO::PARAM_STR);
 
             $statement->execute();
-
-
-
-
-
-
 
  ?>
