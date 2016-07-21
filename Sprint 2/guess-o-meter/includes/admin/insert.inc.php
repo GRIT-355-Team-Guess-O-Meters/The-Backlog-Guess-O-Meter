@@ -38,6 +38,9 @@
 
       $_SESSION['projectid'] = $projectId;
 
+      $dbh = null;
+      $statement = null;
+      
       header('Location: features.php#/' . $projectId . '');
       exit;
 

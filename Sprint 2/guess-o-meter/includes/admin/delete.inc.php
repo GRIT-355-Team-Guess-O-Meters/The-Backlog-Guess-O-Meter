@@ -13,4 +13,7 @@
     $statement->bindParam(':project', $projectName, PDO::PARAM_STR);
 
     $statement->execute();
+
+    $dbh = null;
+    $statement = null;
  ?>

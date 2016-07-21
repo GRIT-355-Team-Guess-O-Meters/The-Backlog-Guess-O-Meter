@@ -12,4 +12,7 @@
 
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+    $dbh = null;
+    $statement = null;
+
   ?>

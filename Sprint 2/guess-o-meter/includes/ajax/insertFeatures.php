@@ -22,4 +22,7 @@
                          $statement->execute();
         }
 
+        $dbh = null;
+        $statement = null;
+
  ?>

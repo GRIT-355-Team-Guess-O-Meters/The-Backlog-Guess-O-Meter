@@ -16,4 +16,7 @@
       $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
       echo json_encode($result);
+
+      $dbh = null;
+      $statement = null;
  ?>
