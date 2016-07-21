@@ -1,4 +1,6 @@
+
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,15 +16,13 @@
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
+
     <div class="container center-align">
         <h1 class="center-align">Survey Page</h1>
 
         <h2 id="surveyUrl" class="center-align">Go here to take survey: <br /> <?php echo $_SESSION['qr-url']; ?></h2>
 
         <img src="./includes/getQRCode.php" alt="qr code"/>
-
-
-
 
 
     </div>
