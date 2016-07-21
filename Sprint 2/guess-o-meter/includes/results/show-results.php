@@ -27,9 +27,6 @@
       echo
 
       "<li class='collection-item row valign-wrapper'><div class='col s10 valign'><h4>" . $row['feature_name'] . "</h4><h6>Average Estimation: " .$row['avg_est'] ."</h6><h6>Total Participants: ". $row['participants_cnt'] . "</h6></div>
-
-
-
       ";
 
     }
@@ -37,4 +34,3 @@
 
 
  ?>
-

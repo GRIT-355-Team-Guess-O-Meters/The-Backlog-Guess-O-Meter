@@ -24,24 +24,23 @@ $(document).ready(function() {
         $.post('includes/ajax/checkStatus.php', {}, function(data){
             var statusInfo = JSON.parse(data);
 
-            if($.isEmptyObject(statusInfo) || statusInfo[0].project_id == projectID){
+
                 $.post('includes/ajax/updateAdmin.php', {
                     projectid: projectID,
                     status: status
                 }, function(data) {
 
-                            if($.isEmptyObject(statusInfo)){
+
+                    window.location = "survey.php#/" + projectID +"";
+
+                            if(status == "Start"){
                                 window.location = "survey.php#/" + projectID +"";
 
                             } else {
-                                window.location.reload();
+                                window.location = "results.php#/" + projectID +"";
                             }
-
-
                 });
-            }else{
-                alert('Please stop a suvery before another one is opened.');
-            }
+
         });
 
 

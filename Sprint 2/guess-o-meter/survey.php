@@ -16,9 +16,15 @@
   <body>
 
     <div class="container center-align">
-        <h1 class="center-align">Survey Page</h1>
+      <div class="row">
 
-        <h2 id="surveyUrl" class="center-align">Go here to take survey: <br /> <?php echo $_SESSION['qr-url']; ?></h2>
+        <h1 class="col s5">Survery</h1>
+
+        <a class="backToAdmin col s3 btn right" href="admin.php">Return to Admin Page</a>
+
+      </div>
+
+        <h4 id="surveyUrl" class="center-align"><?php echo $_SESSION['qr-url']; ?></h4>
 
         <img src="./includes/getQRCode.php" alt="qr code"/>
 
