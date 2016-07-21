@@ -5,7 +5,7 @@
       include_once '../db.inc.php';
       session_start();
 
-      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/The-Backlog-Guess-O-Meter/Sprint%202/guess-o-meter/estimates.php#/' . $_POST['projectid'];
+      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/guess-o-meter/estimates.php#/' . $_POST['projectid'];
 
       echo $_SESSION['surveyid'];
 
