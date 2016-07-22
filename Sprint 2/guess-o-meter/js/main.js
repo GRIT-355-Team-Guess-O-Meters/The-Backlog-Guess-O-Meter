@@ -11,7 +11,7 @@ $(document).ready(function() {
         $.post('includes/ajax/setSession.php', {
             projectid: projectID
         }, function(data) {
-            window.location = "features#/" + projectID + "";
+            window.location = "features";
         });
     });
 
@@ -31,13 +31,13 @@ $(document).ready(function() {
                 }, function(data) {
 
 
-                    window.location = "survey.php#/" + projectID +"";
+                    window.location = "survey";
 
                             if(status == "Start"){
-                                window.location = "survey#/" + projectID +"";
+                                window.location = "survey";
 
                             } else {
-                                window.location = "results#/" + projectID +"";
+                                window.location = "results";
                             }
                 });
 
