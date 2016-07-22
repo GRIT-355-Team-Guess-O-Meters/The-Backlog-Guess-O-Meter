@@ -11,7 +11,7 @@ $(document).ready(function() {
         $.post('includes/ajax/setSession.php', {
             projectid: projectID
         }, function(data) {
-            window.location = "features.php#/" + projectID + "";
+            window.location = "features#/" + projectID + "";
         });
     });
 
@@ -34,10 +34,10 @@ $(document).ready(function() {
                     window.location = "survey.php#/" + projectID +"";
 
                             if(status == "Start"){
-                                window.location = "survey.php#/" + projectID +"";
+                                window.location = "survey#/" + projectID +"";
 
                             } else {
-                                window.location = "results.php#/" + projectID +"";
+                                window.location = "results#/" + projectID +"";
                             }
                 });
 
@@ -46,56 +46,17 @@ $(document).ready(function() {
 
     });
 
-    //When add more button is clicked on the features page it dynamicly creates more
-    //forms for user to add more features.
-    $('#addmore').click(function() {
-        var input = '<div class="' + addMoreCounter + ' valign-wrapper">' +
-            '<div class="col s7 offset-s1">' +
-            '<fieldset>' +
-            '<legend>Add Feature:</legend>' +
-            '<input placeholder="Add Feature Name:" class="featureName" type="text" />' +
-            '<textarea placeholder="Add Feature Description:" class="featureDesc"></textarea>' +
-            '</fieldset>' +
-            '<br />' +
-            '</div>' +
-            '<button class="btn col s2 offset-s1 removeInput valign" counter="' + addMoreCounter + '">Remove</button>' +
-            '</div>';
-        $('#dynamicInput').append(input);
-        addMoreCounter++;
-        $('.removeInput').click(function() {
-            var thisDiv = $(this).attr('counter');
-            $('.' + thisDiv + '').remove();
-        });
-    });
-
-    //when remove button is clicked on the features page it removes a add feature form input.
-    $('.removeInput').click(function() {
-        var thisDiv = $(this).attr('counter');
-
-        $('.' + thisDiv + '').remove();
-
-    });
-
     //when sumbit button on the features page is called it summites the page and stores
     //all the data into the datanase.
     $('#submit').click(function() {
 
-        //Adds all the feature that share the same name as .featurename to a array
-        var allFeatureNameInputs = $('.featureName').map(function() {
-            if ($(this).val()) {
-                return $(this).val();
-            }
-        }).get();
-
-        //Adds all the feature that share the same name as .featurename to a array
-        var allFeatureDescInputs = $('.featureDesc').map(function() {
-            return $(this).val();
-        }).get();
+        var featureName = $('.featureName').val();
+        var featureDesc = $('.featureDesc').val();
 
         //Adds all features and posts it through ajax and stored in the database. (working on changing this)
         $.post('includes/ajax/insertFeatures.php', {
-            featuresNameArr: allFeatureNameInputs,
-            featuresDescArr: allFeatureDescInputs
+            featureName: featureName,
+            featureDesc: featureDesc
         }, function(data) {
             window.location.reload();
         });
@@ -125,7 +86,8 @@ $(document).ready(function() {
 
 
 
-
+    //for the login pop-up box
+    $('.modal-trigger').leanModal();
 
 
 }); //document.ready

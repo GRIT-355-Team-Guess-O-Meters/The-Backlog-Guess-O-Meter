@@ -5,9 +5,7 @@
       include_once '../db.inc.php';
       session_start();
 
-      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/guess-o-meter/estimates.php#/' . $_POST['projectid'];
-
-      echo $_SESSION['surveyid'];
+      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/guess-o-meter/estimates#/' . $_POST['projectid'];
 
       $surveyId = uniqid();
 
@@ -41,16 +39,6 @@
             $_SESSION['surveyid'] = null;
       }
 
-            $sql = 'UPDATE tb_projects
-                    SET current_survey_id = :currentsurveyid
-                    WHERE project_id = :projectid';
-
-            $statement = $dbh->prepare($sql);
-
-            $statement->bindParam(':projectid', $_POST['projectid'], PDO::PARAM_STR);
-            $statement->bindParam(':currentsurveyid', $surveyId, PDO::PARAM_STR);
-
-            $statement->execute();
 
             $dbh = null;
             $statement = null;

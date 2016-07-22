@@ -44,6 +44,7 @@
   }
 
   echo json_encode($data);
+
   $dbh = null;
   $statement = null;
  ?>
