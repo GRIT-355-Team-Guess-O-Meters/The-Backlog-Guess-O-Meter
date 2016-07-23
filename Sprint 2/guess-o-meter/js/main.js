@@ -5,10 +5,18 @@ $(document).ready(function() {
     //when .openBtn is clicked project id for that project is stored into the session
     $('.openBtn').click(function() {
         var projectID = $(this).attr('project-id');
-        $.post('includes/ajax/setSession.php', {
-            projectid: projectID
+        $.post('includes/ajax/checkIfSurveyIsRunning.php', {
+            projectID: projectID
         }, function(data) {
-            window.location = "features";
+            if(data != "null") {
+                alert("This survey is currently running, You must close this survey before you edit the project.");
+            } else {
+                $.post('includes/ajax/setSession.php', {
+                    projectID: projectID
+                }, function(data) {
+                    window.location = "features";
+                });
+            }
         });
     });
 
