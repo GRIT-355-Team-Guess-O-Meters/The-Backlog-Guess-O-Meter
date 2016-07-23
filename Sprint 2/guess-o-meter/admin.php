@@ -1,9 +1,6 @@
 <?php
       // Start the session
       session_start();
-      /**
-      * Include files
-      */
 
       include_once './includes/db.inc.php';
       include_once './includes/admin/insert.inc.php';

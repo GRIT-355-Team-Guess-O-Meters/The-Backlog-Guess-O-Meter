@@ -17,9 +17,8 @@ $(document).ready(function() {
     $('.statusBtn').click(function() {
         var projectID = $(this).attr('project-id');
         var status = $('.statusBtn[project-id = "' + projectID + '"]').text();
-        $.post('includes/ajax/checkStatus.php', {}, function(data) {
-            var statusInfo = JSON.parse(data);
-            $.post('includes/ajax/updateAdmin.php', {
+
+            $.post('includes/ajax/updateStatus.php', {
                 projectid: projectID,
                 status: status
             }, function(data) {
@@ -30,7 +29,6 @@ $(document).ready(function() {
                     window.location = "results";
                 }
             });
-        });
     });
 
     //when sumbit button on the features page is called it summites the page and stores
