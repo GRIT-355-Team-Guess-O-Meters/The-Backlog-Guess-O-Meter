@@ -36,15 +36,17 @@ $(document).ready(function() {
     //when sumbit button on the features page is called it summites the page and stores
     //all the data into the datanase.
     $('#submit').click(function() {
-        var featureName = $('.featureName').val();
-        var featureDesc = $('.featureDesc').val();
+        var featureName = $('#featureName').val();
+        var featureDesc = $('#featureDesc').val();
         //Adds all features and posts it through ajax and stored in the database. (working on changing this)
-        $.post('includes/ajax/insertFeatures.php', {
-            featureName: featureName,
-            featureDesc: featureDesc
-        }, function(data) {
-            window.location.reload();
-        });
+        if(featureName){
+            $.post('includes/ajax/insertFeatures.php', {
+                featureName: featureName,
+                featureDesc: featureDesc
+            }, function(data) {
+                window.location.reload();
+            });
+        }
     });
 
     //when the delete button is clicked deletes feature from database

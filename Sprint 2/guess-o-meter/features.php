@@ -25,8 +25,8 @@
             <div class="col s7 offset-s1">
               <fieldset>
                  <legend>Add Feature:</legend>
-                 <input placeholder="Add Feature Name:" class="featureName" type="text" />
-                <textarea placeholder="Add Feature Description:" class="featureDesc"></textarea>
+                 <input placeholder="Add Feature Name:" id="featureName" type="text" />
+                <textarea placeholder="Add Feature Description:" id="featureDesc"></textarea>
               </fieldset>
               <br>
             </div>
