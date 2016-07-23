@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Title</title>
-
     <!--Materialize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!--Materialize Icons CSS-->
@@ -13,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-  <?php
-    include_once "./includes/navigation.php";
-   ?>
-    <div class="container">
+    <?php
+      include_once "./includes/navigation.php";
+     ?>
+  <div class="container">

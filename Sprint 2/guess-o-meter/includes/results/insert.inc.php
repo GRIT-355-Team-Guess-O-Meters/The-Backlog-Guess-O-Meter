@@ -5,7 +5,6 @@
   */
 
   if(isset($_SESSION['project_id'])){
-
     
   }
 

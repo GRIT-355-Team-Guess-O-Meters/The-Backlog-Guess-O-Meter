@@ -3,9 +3,6 @@
  ?>
 
 <h1 class="center-align">{{ projectname }}</h1>
-
-
-
             <div class="row">
                  <div ng-hide="currentIndex != {{ $index }}" class="singleEstimate " ng-repeat="result in results">
                      <div class="offset-s1 center-align valign-wrapper estimate-border">

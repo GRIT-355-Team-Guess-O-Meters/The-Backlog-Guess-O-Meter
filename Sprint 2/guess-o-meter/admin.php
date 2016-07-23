@@ -18,8 +18,8 @@
               <form action="" method="post">
                 <div class="input-field">
                   <label for="create_project">Create New Projet:</label>
-                  <input class="col s10" id="create_project" type="text" name="project" />
-                  <input class="col s2 btn lime darken-3" type="submit" value="Add Project" name="submit" />
+                  <input class="col s9" id="create_project" type="text" name="project" />
+                  <input class="col s2 offset-s1 btn lime darken-3" type="submit" value="Add Project" name="submit" />
                 </div>
               </form>
         </div>

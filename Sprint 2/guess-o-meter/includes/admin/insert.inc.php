@@ -7,9 +7,7 @@
   //if a user goes back to the projects page
   //the session for the project id is ueset
   if(isset($_SESSION['projectid'])){
-
     unset($_SESSION['projectid']);
-
   }
 
   if(isset($_POST['submit'])){
@@ -25,25 +23,19 @@
       $statement->execute();
 
       $sql = "SELECT project_id FROM tb_projects WHERE project_name = :pname";
-
       $statement = $dbh->prepare($sql);
-
       $statement->bindParam(':pname', $projectName, PDO::PARAM_STR);
-
       $statement->execute();
-
       $row = $statement->fetch(PDO::FETCH_ASSOC);
-
       $projectId = $row['project_id'];
-
       $_SESSION['projectid'] = $projectId;
 
+      //Closing DB Connection
       $dbh = null;
       $statement = null;
-      
+
       header('Location: features.php#/' . $projectId . '');
       exit;
-
     }
   }
  ?>
