@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include_once '../db.inc.php';
 
   $sql = "SELECT current_survey_id FROM tb_projects WHERE project_id = :project_id";

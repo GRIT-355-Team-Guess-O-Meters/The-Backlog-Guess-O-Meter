@@ -34,7 +34,12 @@ $(document).ready(function() {
                 if (status == "Start") {
                     window.location = "survey";
                 } else {
-                    window.location = "results";
+
+                    $.post('includes/ajax/setSession.php', {
+                        projectID: projectID
+                    }, function(data) {
+                        window.location = "results";
+                    });
                 }
             });
     });

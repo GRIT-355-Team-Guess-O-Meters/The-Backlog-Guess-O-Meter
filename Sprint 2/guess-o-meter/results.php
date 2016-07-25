@@ -5,6 +5,7 @@
   session_start();
 
   include_once './includes/db.inc.php';
+  include_once './includes/features/select.inc.php';
 
 ?>
 <?php include_once './includes/header.inc.php'; ?>
