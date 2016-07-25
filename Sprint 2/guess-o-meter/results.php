@@ -29,7 +29,9 @@
 
           <ul id="feature-list" class="collection">
 
-            <?php include_once './includes/results/show-results.php';  ?>
+            <?php include_once './includes/results/show-results.php';
+			include_once './includes/results/show-total.php';?>
+			
           </ul>
 
 		<div>
