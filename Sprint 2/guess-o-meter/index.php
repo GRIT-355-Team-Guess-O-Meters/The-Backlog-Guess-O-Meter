@@ -4,7 +4,7 @@
 
         <h1>Fast Estimation</h1>
 
-        <img src="" alt="Fast Agile Image"/>
+        <img src="includes/images/" alt="Fast Agile Image"/>
 
         <h3>About Fast Estimation</h3>
 
@@ -17,7 +17,6 @@
         ice cream pudding toffee. Croissant cupcake sweet jelly beans powder. Pastry gingerbread carrot cake.
         Danish chocolate bar macaroon oat cake halvah apple pie cotton candy powder. </p>
 
-        <a href= "admin.php">Login to Admin Page</a>
 
 
         <?php include_once './includes/footer.inc.php'; ?>

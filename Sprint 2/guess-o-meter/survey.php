@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php session_start();
+ if($_SESSION['logged-in'] != true) {
+        header('Location: index.php');
+        
+      }
+      ?>
 <?php include_once './includes/header.inc.php'; ?>
 
 

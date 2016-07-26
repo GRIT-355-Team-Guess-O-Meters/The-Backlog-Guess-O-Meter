@@ -1,7 +1,12 @@
 <?php
       // Start the session
       session_start();
-
+      
+      if($_SESSION['logged-in'] != true) {
+        header('Location: index.php');
+        
+      }  
+      
       include_once './includes/db.inc.php';
       include_once './includes/admin/insert.inc.php';
       include_once './includes/admin/select.inc.php';

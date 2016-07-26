@@ -83,4 +83,29 @@ $(document).ready(function() {
     //for the login pop-up box
     $('.modal-trigger').leanModal();
 
+    
+    //
+    $('#login-button').click(function() {
+        //to get username
+        var username = $('#icon_prefix').val();
+        //to get password
+        var password = $('#icon_password').val();
+        if (username && password) {
+        $.post('includes/ajax/setUser.php', {
+            user: username,
+            pass: password
+            }, function(data) {
+                username = "";
+                password = "";
+                window.location = 'admin';
+                });
+        }
+        
+        });
+    
+    $('#logout').click(function() {
+        $.post('includes/ajax/destroySession.php', {}, function(data) {
+            window.location.reload();
+               });
+        });
 }); //document.ready
