@@ -10,7 +10,7 @@
     <div class="container center-align">
       <div class="row">
 
-        <h1 class="col s5">Survery</h1>
+        <h1 class="col s5">Survey</h1>
 
 
       </div>
