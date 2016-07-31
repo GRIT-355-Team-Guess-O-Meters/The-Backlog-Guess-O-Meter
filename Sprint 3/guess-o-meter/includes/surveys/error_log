@@ -1,0 +1,2 @@
+[19-Jul-2016 10:52:28 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/guestometer/public_html/guess-o-meter/includes/features/show-features.php on line 9
+[19-Jul-2016 10:56:14 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/guestometer/public_html/guess-o-meter/includes/features/select.inc.php on line 11
