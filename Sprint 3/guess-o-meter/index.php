@@ -14,6 +14,8 @@
         FAST Forecasting is an ultra lightweight alternative to story pointing, story sizing,
         velocity, planning poker, modified Fibonacci sequence and all the confusion they come with. </p>
 
-
+        <div class="center-align">
+                <a class="btn" href="#">Become a Beta Tester</a>
+        </div>
 
         <?php include_once './includes/footer.inc.php'; ?>
