@@ -4,7 +4,7 @@
 
         <h1 class="center-align">Fast Forecaster</h1>
 
-        <div class="center-align" >
+        <div class="center-align">
                 <img src="./includes/images/FASTagile.jpg" alt="Fast Agile Image"/>
         </div>
 

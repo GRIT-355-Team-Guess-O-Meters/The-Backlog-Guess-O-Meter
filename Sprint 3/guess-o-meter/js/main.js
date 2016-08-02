@@ -1,6 +1,14 @@
-
 //when page is ready run this code
 $(document).ready(function() {
+    $.post('includes/ajax/getLoginSession.php', { }, function(data) {
+          if(data == "true"){
+              $('.nav-handle').removeClass('hide-nav');
+              $('#login-handle').addClass('hide-nav');
+          } else {
+              $('.nav-handle').addClass('hide-nav');
+              $('#login-handle').removeClass('hide-nav');
+          }
+        });
 
     //when .openBtn is clicked project id for that project is stored into the session
     $('.openBtn').click(function() {
@@ -34,7 +42,6 @@ $(document).ready(function() {
                 if (status == "Start") {
                     window.location = "survey";
                 } else {
-
                     $.post('includes/ajax/setSession.php', {
                         projectID: projectID
                     }, function(data) {
@@ -83,8 +90,6 @@ $(document).ready(function() {
     //for the login pop-up box
     $('.modal-trigger').leanModal();
 
-    
-    //
     $('#login-button').click(function() {
         //to get username
         var username = $('#icon_prefix').val();
@@ -100,9 +105,9 @@ $(document).ready(function() {
                 window.location = 'admin';
                 });
         }
-        
+
         });
-    
+
     $('#logout').click(function() {
         $.post('includes/ajax/destroySession.php', {}, function(data) {
             window.location.reload();
