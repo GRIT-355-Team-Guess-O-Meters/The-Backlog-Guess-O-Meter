@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<?php include_once 'includes/dynamicPageSpecs.php'; ?>
 <html>
   <head>
-    <title>Fast Forecast</title>
+    <title><?php echo $title ?></title>
     <!--Materialize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!--Materialize Icons CSS-->
