@@ -30,7 +30,4 @@
         <button class="red accent-3 btn col s6 offset-s3">STOP</button>
     </div>
 
-
-
-
 <?php include_once './includes/footer.inc.php'; ?>

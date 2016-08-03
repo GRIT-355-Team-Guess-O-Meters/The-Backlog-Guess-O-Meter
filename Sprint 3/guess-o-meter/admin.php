@@ -21,7 +21,9 @@
                 <div class="input-field">
                   <label for="create_project">Create New Projet:</label>
                   <input class="col s9" id="create_project" type="text" name="project" />
-                  <input class="col s2 offset-s1 btn lime darken-3" type="submit" value="Add Project" name="submit" />
+                    <button class="offset-s1 btn-floating lime darken-3" type="submit" value="Add Project" name="submit">
+                        <i class="material-icons">add</i>
+                    </button>
                 </div>
               </form>
         </div>

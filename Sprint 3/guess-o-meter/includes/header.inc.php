@@ -15,5 +15,5 @@
   <body>
     <?php
       include_once "./includes/navigation.php";
-     ?>
-  <div class="container">
+    ?>
+  <div class="container" id="main">
