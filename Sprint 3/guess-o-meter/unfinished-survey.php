@@ -27,7 +27,6 @@
                 <td><?php echo $lastPing; ?></td>
             </tr>
         </table>
-
         <button id="stop-survey" class="red accent-3 btn col s6 offset-s3">STOP</button>
     </div>
 

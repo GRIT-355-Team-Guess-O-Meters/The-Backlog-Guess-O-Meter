@@ -15,11 +15,9 @@
 
       <div class="row">
         <h1 class="col s5">List of Surveys </h1>
-
       </div>
 
       <div class="row">
-
         <div class="card col s10 offset-s1">
           <h2 class="center-align">Project: <?php echo $projectName; ?></h2>
 
@@ -38,8 +36,6 @@
             </div>
             <button id="submit" class="btn col s2 offset-s1 valign">Add Survey</button>
           </div>
-
-
         </div>
       </div>
 

@@ -1,7 +1,5 @@
 <?php include_once './includes/header.inc.php'; ?>
 
-
-
         <h1 class="center-align">FAST Forecaster</h1>
 
         <div class="center-align">
@@ -18,4 +16,4 @@
                 <a class="btn" href="#">Become a Beta Tester</a>
         </div>
 
-        <?php include_once './includes/footer.inc.php'; ?>
+<?php include_once './includes/footer.inc.php'; ?>

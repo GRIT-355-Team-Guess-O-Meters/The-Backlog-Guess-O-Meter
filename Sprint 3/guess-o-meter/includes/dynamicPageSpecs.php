@@ -29,8 +29,16 @@
       $title = "Results";
       break;
 
+    case 'unfinished-survey':
+      $title = 'Suvery Running...';
+      break;
+
+    case 'finished-survey':
+      $title = 'Suvery Complete';
+      break;
+
     default:
-      $title = "";
+      $title = '';
       break;
   }
  ?>
