@@ -1,33 +1,34 @@
 <?php include_once './includes/header.inc.php'; ?>
+<?php include_once './includes/surveys/survey-data.php'; ?>
 
-    <h1 class="center-align">Project - Name Of Project</h1>
-    <h2 class="center-align">Survey - Name of Survey</h2>
+    <h1 class="center-align">Project - <?php echo $projectName ?></h1>
+    <h2 class="center-align">Survey - <?php echo $surveyName ?></h2>
 
     <div class="row">
         <table class="col s6 offset-s3 card striped bordered">
             <tr>
                 <td>Survey Started: </td>
-                <td>Date - Time</td>
+                <td><?php echo $dateAndTime; ?></td>
             </tr>
             <tr>
                 <td># participants started:</td>
-                <td>1051</td>
+                <td><?php echo $participantsStarted;  ?></td>
             </tr>
             <tr>
                 <td># Finished:</td>
-                <td>500</td>
+                <td><?php echo $participantsFinished; ?></td>
             </tr>
             <tr>
                 <td># Not Finished:</td>
-                <td>551</td>
+                <td><?php echo $participantNotFinished; ?></td>
             </tr>
             <tr>
                 <td>Last Ping:</td>
-                <td>12 seconds ago</td>
+                <td><?php echo $lastPing; ?></td>
             </tr>
         </table>
 
-        <button class="red accent-3 btn col s6 offset-s3">STOP</button>
+        <button id="stop-survey" class="red accent-3 btn col s6 offset-s3">STOP</button>
     </div>
 
 <?php include_once './includes/footer.inc.php'; ?>

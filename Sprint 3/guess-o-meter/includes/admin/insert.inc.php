@@ -10,14 +10,14 @@
     unset($_SESSION['projectid']);
   }
 
-  if(isset($_POST['submit'])){
-    if(isset($_POST['project']) && !empty($_POST['project'])){
+  if(isset($_SESSION['submit'])){
+    if(isset($_SESSION['project']) && !empty($_SESSION['project'])){
 
       $sql = "INSERT INTO tb_projects(project_name)
               VALUES (:project)";
 
       $statement = $dbh->prepare($sql);
-      $projectName = $_POST['project'];
+      $projectName = $_SESSION['project'];
 
       $statement->bindParam(':project', $projectName, PDO::PARAM_STR);
       $statement->execute();

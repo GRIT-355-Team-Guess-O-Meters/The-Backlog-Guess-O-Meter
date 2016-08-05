@@ -7,8 +7,8 @@
 
         $statement = $dbh->prepare($sql);
         $statement->bindParam(':projectid', $_SESSION['projectid'] , PDO::PARAM_STR);
-        $statement->bindParam(':featurename', $_POST['featureName'], PDO::PARAM_STR);
-        $statement->bindParam(':featuredesc', $_POST['featureDesc'], PDO::PARAM_STR);
+        $statement->bindParam(':featurename', $_SESSION['featureName'], PDO::PARAM_STR);
+        $statement->bindParam(':featuredesc', $_SESSION['featureDesc'], PDO::PARAM_STR);
         $statement->execute();
 
         //Closing DB Connection

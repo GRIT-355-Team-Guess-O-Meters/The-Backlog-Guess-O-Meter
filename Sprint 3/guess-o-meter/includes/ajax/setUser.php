@@ -2,8 +2,8 @@
      include_once '../db.inc.php';
      session_start();
 
-     $user = $_POST['user'];
-     $pass = $_POST['pass'];
+     $user = $_SESSION['user'];
+     $pass = $_SESSION['pass'];
 
 
     $sql = "SELECT username, password FROM tb_users WHERE username = :username AND password = :password";

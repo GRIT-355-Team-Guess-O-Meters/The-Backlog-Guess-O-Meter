@@ -106,11 +106,19 @@ $(document).ready(function() {
                 });
         }
 
-        });
+    });
 
+    //when this button is clicked user is logged out of the application
     $('#logout').click(function() {
         $.post('includes/ajax/destroySession.php', {}, function(data) {
             window.location.reload();
                });
+    });
+
+    //closes the survey and redirects user to finished survey page
+    $('#stop-survey').click(function () {
+        $.post('includes/ajax/stop-survey.php', {}, function (data) {
+            window.location = "finished-survey";
         });
+    });
 }); //document.ready

@@ -4,7 +4,7 @@
 
   $sql = "SELECT current_survey_id FROM tb_projects WHERE project_id = :project_id";
   $statement = $dbh->prepare($sql);
-  $statement->bindParam(':project_id', $_POST['projectID'], PDO::PARAM_STR);
+  $statement->bindParam(':project_id', $_SESSION['projectID'], PDO::PARAM_STR);
   $statement->execute();
   $row = $statement->fetch(PDO::FETCH_ASSOC);
 
