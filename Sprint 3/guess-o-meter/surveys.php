@@ -2,13 +2,13 @@
   // Start the session
   session_start();
   if($_SESSION['logged-in'] != true) {
-        header('Location: index.php');
-        
-      }  
+        header('Location: index');
+
+      }
   include_once './includes/db.inc.php';
   include_once './includes/features/select.inc.php';
-  
-  
+
+
 
 ?>
 <?php include_once './includes/header.inc.php'; ?>
@@ -23,7 +23,7 @@
         <div class="card col s10 offset-s1">
           <h2 class="center-align">Project: <?php echo $projectName; ?></h2>
 
-          <ul id="survey-list" class="collection">
+          <ul id="feature-list" class="collection">
             <?php include_once './includes/surveys/show-surveys.php';  ?>
           </ul>
 
@@ -31,12 +31,12 @@
             <div class="col s7 offset-s1">
               <fieldset>
                  <legend>Add Survey:</legend>
-                 <input placeholder="Add Survey Name:" id="surveyName" type="text" />
+                 <input placeholder="Add Survey Name:" id="featureName" type="text" />
                 <textarea placeholder="Add Survey Description:" id="surveyDesc"></textarea>
               </fieldset>
               <br>
             </div>
-            <button id="newSurvey" class="btn col s2 offset-s1 valign">Add Survey</button>
+            <button id="submit" class="btn col s2 offset-s1 valign">Add Survey</button>
           </div>
 
 

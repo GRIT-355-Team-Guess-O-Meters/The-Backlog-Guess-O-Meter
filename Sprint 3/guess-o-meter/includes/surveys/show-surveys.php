@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
     include_once './includes/db.inc.php';
     $sql = "SELECT * FROM tb_survey WHERE project_id = :projectid";
@@ -28,14 +28,7 @@
    </tr>";
 
     foreach ($result as $row) {
-		$status = "1" ;
-		if($row['end_date'] == '0000-00-00 00:00:00'){
-			$status = "Running";
-		}else{
-			$status = "Stopped". $row['end_date'] ;
-		}
-			
-		
+
       echo
 
       "<tr>
@@ -45,8 +38,8 @@
     <td><h6 class='center'>". $row['start_date'] ."</h6>
 </td>
 
-    <td><h6 class='center'>". $status."</h6></td>
-    
+    <td><h6 class='center'>". $row['end_date'] ."</h6></td>
+    <td><button survey-id='" . $row['survey_id'] . "' class='delete btn' >Delete</button></td>
   </tr>";
 
  
