@@ -1,6 +1,7 @@
 <?php
 include_once './includes/db.inc.php';
-session_start();
+
+// TEST DATA CURRENTLY USED
 $projectName = "Test Project" /*isset($_SESSION['project-name']) ? $_SESSION['project-name'] : ''*/;
 $surveyName = "Test Survey"/*isset($_SESSION['survey-name']) ? $_SESSION['survey-name'] : ''*/;
 $surveyId = "test-id" /*isset($_SESSION['survey-id']) ? $_SESSION['survey-id'] : ''*/;
