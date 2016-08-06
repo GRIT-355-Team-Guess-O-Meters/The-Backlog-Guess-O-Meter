@@ -4,18 +4,18 @@
       session_start();
 
       // Creates the url of the survey and stores it in the session
-      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/guess-o-meter/estimates#/' . $_SESSION$_SESSION['projectid'];
+      $_SESSION['qr-url'] = $_SERVER['HTTP_HOST'] . '/guess-o-meter/estimates#/' . $_SESSION['projectid'];
       //Generates a unique value to create a surveyId
       $surveyId = uniqid();
       $status = '';
 
       //sets the status
-      if($_SESSION$_SESSION['status'] == 'Stop' || $_SESSION$_SESSION['status'] == ''){
+      if($_SESSION['status'] == 'Stop' || $_SESSION['status'] == ''){
             $status = 'Start';
       }
 
       //sets the status
-      if($_SESSION$_SESSION['status'] == 'Start'){
+      if($_SESSION['status'] == 'Start'){
             $status = 'Stop';
       }
 
@@ -26,19 +26,19 @@
                     WHERE project_id = :projectid';
 
             $statement = $dbh->prepare($sql);
-            $statement->bindParam(':projectid', $_SESSION$_SESSION['projectid'], PDO::PARAM_STR);
+            $statement->bindParam(':projectid', $_SESSION['projectid'], PDO::PARAM_STR);
             $statement->bindParam(':status', $status, PDO::PARAM_STR);
             $statement->execute();
       }
 
       //removes the survey id if the survey has been stopped
-      if(trim($_SESSION$_SESSION['status']) == 'Stop') {
+      if(trim($_SESSION['status']) == 'Stop') {
             $surveyId = null;
             $_SESSION['surveyid'] = null;
       }
 
-            //Closing DB Connection
-            $dbh = null;
-            $statement = null;
+      //Closing DB Connection
+      $dbh = null;
+      $statement = null;
 
  ?>
