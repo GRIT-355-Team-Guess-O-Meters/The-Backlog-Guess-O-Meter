@@ -7,49 +7,30 @@
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-	
 	if( $result == NULL ){
-
         echo "<h4 class='center'>There is not results to display for this survey.</h4>";
-
     }else{
 
-    
-
     echo "<table><tr>
-
- <th><h4>Survey Name</h4></th>
-
-  <th><h4>Start Date</h4></th>
-
- <th><h4>End Date</h4></th>
- <th> <h4> </h4> </th>
-
+     <th><h4>Survey Name</h4></th>
+     <th><h4>Start Date</h4></th>
+     <th><h4>End Date</h4></th>
+     <th><h4> </h4></th>
    </tr>";
 
     foreach ($result as $row) {
-
       echo
-
-      "<tr>
-
-    <td><h6>". $row['survey_name'] . "</h6></td>
-
-    <td><h6 class='center'>". $row['start_date'] ."</h6>
-</td>
-
-    <td><h6 class='center'>". $row['end_date'] ."</h6></td>
-    <td><button survey-id='" . $row['survey_id'] . "' class='delete btn' >Delete</button></td>
-  </tr>";
-
- 
-
-    }
+        "<tr>
+          <td><h6>". $row['survey_name'] . "</h6></td>
+          <td><h6 class='center'>". $row['start_date'] ."</h6></td>
+          <td><h6 class='center'>". $row['end_date'] ."</h6></td>
+          <td><button survey-id='" . $row['survey_id'] . "' class='delete btn' >Delete</button></td>
+        </tr>";
+      }
 
     echo "</table>";
-
     }
-    
+
     //Closing DB Connection
     $dbh = null;
     $statement = null;

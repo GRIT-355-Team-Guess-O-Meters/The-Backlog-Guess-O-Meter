@@ -2,8 +2,10 @@
       include_once './includes/header.inc.php';
       include_once './includes/surveys/survey-data.php'; ?>
 
-    <h1 class="center-align">Project - <?php echo $projectName ?></h1>
-    <h2 class="center-align">Survey - <?php echo $surveyName ?></h2>
+      <div class"space-out">
+            <h3 class="center-align">Project - <?php echo $projectName ?></h3>
+            <h4 class="center-align">Survey - <?php echo $surveyName ?></h4>
+      </div>
 
     <div class="row">
         <table class="col s6 offset-s3 card striped bordered">

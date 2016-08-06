@@ -1,6 +1,7 @@
 <header>
     <nav>
         <div class="nav-wrapper lime darken-4">
+
             <a href="index" class="line-text brand-logo left">FAST Forecaster</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li id="login-handle"><a class="line-text modal-trigger" href="#login">Login</a></li>
@@ -10,4 +11,3 @@
         </div>
     </nav>
 </header>
-
