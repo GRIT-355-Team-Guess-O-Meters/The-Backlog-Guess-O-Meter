@@ -5,6 +5,10 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 1.5px 1.5px #e0e0e0;
 }
 
+.btn-width {
+  width: 25em;
+}
+
 .flashy-text {
   font-family: 'Fredericka the Great', cursive !important;
   margin-top: .5em;

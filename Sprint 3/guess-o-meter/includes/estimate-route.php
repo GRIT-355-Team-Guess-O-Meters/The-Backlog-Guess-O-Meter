@@ -2,7 +2,7 @@
     include_once './estimates/set-particpant-id.php';
  ?>
 
-<h1 class="center-align">{{ projectname }}</h1>
+<h4 class="center-align">{{ projectname }}</h4>
             <div class="row">
                  <div ng-hide="currentIndex != {{ $index }}" class="singleEstimate " ng-repeat="result in results">
                      <div class="offset-s1 center-align valign-wrapper estimate-border">

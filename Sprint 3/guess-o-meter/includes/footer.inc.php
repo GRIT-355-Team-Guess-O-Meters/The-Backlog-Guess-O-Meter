@@ -1,6 +1,7 @@
-</div><!-- container -->
-</div>
+</div><!-- end of valign div -->
+</div><!-- end of container -->
 
+<!-- Footer HTML -->
 <footer class="page-footer lime darken-4">
     <div class="container">
         <div class="row">
@@ -45,13 +46,13 @@
                     <h4 class="center-align">Login</h4>
                     <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Username</label>
+                        <input id="username-tbox" type="text" class="validate">
+                        <label for="username-tbox">Username</label>
                     </div>
                     <div class="input-field">
                         <i class="material-icons prefix">lock</i>
-                        <input id="icon_password" type="password" class="validate">
-                        <label for="icon_password">Password</label>
+                        <input id="password-tbox" type="password" class="validate">
+                        <label for="password-tbox">Password</label>
                     </div>
                 </div>
             </form>

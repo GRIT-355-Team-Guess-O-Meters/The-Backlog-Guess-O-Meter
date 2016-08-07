@@ -1,4 +1,4 @@
-<?php session_start();
+<?php include_once './includes/checkIfLoggedIn.php';
       include_once './includes/header.inc.php';
       include_once './includes/surveys/survey-data.php'; ?>
 

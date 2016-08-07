@@ -12,8 +12,6 @@
     <link href='https://fonts.googleapis.com/css?family=Cinzel:900' rel='stylesheet' type='text/css'>
     <!--Project CSS-->
     <link rel="stylesheet" href="./css/main.css">
-    <!-- Social Media Icons -->
-    <link rel="stylesheet" href="path/to/pe-icon-social/css/pe-icon-social.css">
   </head>
   <body>
     <?php

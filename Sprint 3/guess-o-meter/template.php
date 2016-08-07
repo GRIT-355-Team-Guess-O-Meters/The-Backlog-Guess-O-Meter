@@ -1,4 +1,5 @@
-<?php include_once './includes/header.inc.php'; ?>
+<?php include_once './includes/checkIfLoggedIn.php';
+      include_once './includes/header.inc.php'; ?>
 
         <!--Content Goes Here-->
 
