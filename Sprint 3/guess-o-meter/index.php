@@ -1,6 +1,11 @@
 <?php include_once './includes/header.inc.php'; ?>
 
-<h1 class="center-align flashy-text">FAST Forecaster</h1>
+        <h1 class="center-align flashy-text">FAST Forecaster</h1>
+
+        <p class="flow-text"> We are experimenting to uncover alternatives to agile estimation…</p>
+
+        <p class="flow-text"> FAST Forecasting is a method for estimating the size of an agile backlog
+        feature set in minutes using the Wisdom of Crowds. </p>
 
 <div class="center-align">
    <img src="./includes/images/FASTagile.jpg" alt="Fast Agile Image"/>
