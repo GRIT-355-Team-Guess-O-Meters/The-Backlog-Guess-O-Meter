@@ -21,10 +21,11 @@
     foreach ($result as $row) {
       echo
         "<tr>
-          <td><h6>". $row['survey_name'] . "</h6></td>
+          <td><button feature-id='" . $row['feature_id'] . "' class='delete-feature btn' >". $row['survey_name'] . "</button>
+		  </td>
           <td><h6 class='center'>". $row['start_date'] ."</h6></td>
           <td><h6 class='center'>". $row['end_date'] ."</h6></td>
-          <td><button survey-id='" . $row['survey_id'] . "' class='delete btn' >Delete</button></td>
+
         </tr>";
       }
 
