@@ -78,6 +78,19 @@ $(document).ready(function() {
             window.location.reload();
     });});
 
+	//when sumbit button on the surveys page is called it summites the page and stores
+	    //all the data into the datanase.
+	    $('#submit-survey').click(function() {
+	        var surveyName = $('#surveyName').val();
+	        var surveyDesc = $('#surveyDesc').val();
+	        //Adds all features and posts it through ajax and stored in the database. (working on changing this)
+	        if(surveyName){
+	            $.post('includes/ajax/insertSurvey.php', {
+	                surveyName: surveyName,
+	                surveyDesc: surveyDesc
+	            }, function(data) {
+	                window.location.reload();
+    });}});
     //for the login pop-up box
     $('.modal-trigger').leanModal();
 
