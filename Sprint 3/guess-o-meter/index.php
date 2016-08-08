@@ -1,4 +1,5 @@
-<?php include_once './includes/header.inc.php'; ?>
+<?php include_once './includes/header.inc.php';
+      echo password_hash("Ron355", PASSWORD_BCRYPT); ?>
 
         <h1 class="center-align flashy-text">FAST Forecaster</h1>
 

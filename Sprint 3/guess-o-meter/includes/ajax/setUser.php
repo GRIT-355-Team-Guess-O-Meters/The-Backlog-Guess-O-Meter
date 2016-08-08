@@ -14,7 +14,13 @@
 
     $hash = isset($result['password']) ? $result['password'] : "";
 
-    if(password_verify($pass, $hash)) {
+    // if(password_verify($pass, $hash)) {
+    //     $_SESSION['logged-in'] = true;
+    // } else {
+    //     $_SESSION['logged-in'] = false;
+    // }
+
+    if(crypt($pass, $hash) === $hash) {
         $_SESSION['logged-in'] = true;
     } else {
         $_SESSION['logged-in'] = false;
