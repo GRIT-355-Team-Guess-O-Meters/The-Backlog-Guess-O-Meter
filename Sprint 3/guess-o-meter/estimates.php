@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="estimatePage">
   <head>
-    <title>Title</title>
+    <title>Survey</title>
 
     <!--Materialize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
