@@ -36,6 +36,6 @@ $now = date("H:i:s");
 $lastPing = isset($row['last_ping']) ? strtotime($now) - strtotime($row['last_ping']) : 0;
 
 //Closing DB Connection
-$dbh = null;
-$statement = null;
+// $dbh = null;
+// $statement = null;
 ?>
