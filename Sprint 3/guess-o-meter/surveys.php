@@ -13,12 +13,12 @@
          <div class="col s7 offset-s1">
             <fieldset>
                <legend>Add Survey:</legend>
-               <input placeholder="Add Survey Name:" id="featureName" type="text" />
+               <input placeholder="Add Survey Name:" id="surveyName" type="text" />
                <textarea placeholder="Add Survey Description:" id="surveyDesc"></textarea>
             </fieldset>
             <br>
          </div>
-         <button id="submit" class="btn col s2 offset-s1 valign">Add Survey</button>
+         <button id="submit-survey" class="btn col s2 offset-s1 valign">Add Survey</button>
       </div>
    </div>
 </div>

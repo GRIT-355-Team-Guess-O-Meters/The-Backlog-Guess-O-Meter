@@ -1,0 +1,19 @@
+[05-Aug-2016 17:42:49 America/Chicago] PHP Parse error:  syntax error, unexpected 'projectid' (T_STRING) in /home/guestometer/public_html/guess-o-meter/includes/ajax/deleteProject.php on line 15
+[07-Aug-2016 18:10:39 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:10:44 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:10:50 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:12:04 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:12:15 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:12:19 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:12:23 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:12:34 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 18:15:17 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 19:00:58 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 19:01:25 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[07-Aug-2016 19:06:12 America/Chicago] PHP Fatal error:  Call to undefined function password_verify() in /home/guestometer/public_html/guess-o-meter/includes/ajax/setUser.php on line 17
+[08-Aug-2016 21:08:26 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 17
+[08-Aug-2016 21:09:06 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 17
+[08-Aug-2016 21:09:35 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 17
+[08-Aug-2016 21:28:32 America/Chicago] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 5
+[08-Aug-2016 21:28:40 America/Chicago] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 5
+[08-Aug-2016 21:36:47 America/Chicago] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/guestometer/public_html/guess-o-meter/includes/ajax/insertSurvey.php on line 5
