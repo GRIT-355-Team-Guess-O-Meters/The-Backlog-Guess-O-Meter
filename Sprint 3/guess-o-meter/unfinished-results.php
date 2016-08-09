@@ -1,10 +1,12 @@
-<?php include_once './includes/checkIfLoggedIn.php';
+<?php include_once './includes/db.inc.php';
+      include_once './includes/checkIfLoggedIn.php';
       include_once './includes/header.inc.php';
+      include_once './includes/getProjectNameFromDB.php';
       include_once './includes/surveys/survey-data.php'; ?>
 
       <div class"space-out">
-            <h3 class="center-align">Project - <?php echo $projectName ?></h3>
-            <h4 class="center-align">Survey - <?php echo $surveyName ?></h4>
+            <h3 class="center-align">Project - <?php echo $projectName; ?></h3>
+            <h4 class="center-align">Survey - <?php echo $surveyName; ?></h4>
       </div>
 
     <div class="row">
@@ -27,7 +29,7 @@
             </tr>
             <tr>
                 <td>Last Ping:</td>
-                <td><?php echo $lastPing; ?></td>
+                <td><?php echo gmdate("H:i:s", $lastPing); ?></td>
             </tr>
         </table>
         <button id="stop-survey" class="red accent-3 btn col s6 offset-s3">STOP</button>

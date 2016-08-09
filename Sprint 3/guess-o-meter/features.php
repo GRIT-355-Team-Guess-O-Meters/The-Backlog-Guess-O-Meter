@@ -1,6 +1,6 @@
 <?php include_once './includes/checkIfLoggedIn.php';
       include_once './includes/db.inc.php';
-      include_once './includes/features/select.inc.php';
+      include_once './includes/getProjectNameFromDB.php';
       include_once './includes/header.inc.php'; ?>
 
 <div class="row">

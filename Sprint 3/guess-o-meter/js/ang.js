@@ -3,10 +3,10 @@ var estimatePage = angular.module('estimatePage', ['ngRoute']);
 //router
 estimatePage.config(function($routeProvider) {
     $routeProvider
-        .when('/:projectid', {
+        .when('/:projectid/:surveyid', {
         templateUrl: 'includes/estimate-route.php',
         controller: 'estimateController'
-    })
+    });
 });
 
 //controller
@@ -42,9 +42,12 @@ estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http'
                 url: 'includes/ajax/set-estimates.php',
                 data: {
                     'projectid': $routeParams.projectid,
+                    'surveyid': $routeParams.surveyid,
                     'featureid': featureID,
                     'estimatevalue': estimateValue,
-                    'participantid': participantID
+                    'participantid': participantID,
+                    'index' : $scope.currentIndex,
+                    'lastindex' : $scope.results.length
                 }
             });
             //Recives the data back from php
@@ -54,5 +57,5 @@ estimatePage.controller('estimateController', ['$scope', '$routeParams', '$http'
         } else {
             alert('invalid Input');
         }
-    }
+    };
 }]);

@@ -3,16 +3,23 @@
       session_start();
       $stop = 'Stop';
 
-      $sql = "SELECT project_id, status, current_survey_id
-              FROM tb_projects
-              WHERE status = :stop";
+      $sql = "SELECT status
+              FROM tb_survey
+              WHERE survey_id = :surveyid";
+
       $statement = $dbh->prepare($sql);
-      $statement->bindParam(':stop', $stop , PDO::PARAM_STR);
+      $statement->bindParam(':surveyid', $_SESSION['surveyid'] , PDO::PARAM_STR);
       $statement->execute();
-      $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+      $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+       if($result['status'] == 0){
+             $bool = true;
+      } else {
+            $bool = false;
+      }
 
       //returns data to ajax
-      echo json_encode($result);
+      echo json_encode($bool);
 
       //Closing DB Connection
       $dbh = null;

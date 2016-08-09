@@ -27,8 +27,6 @@
 
 <!--jQuery JS-->
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<!--Angular JS-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <!--Materialize JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <!--Project JS-->

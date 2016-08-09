@@ -1,5 +1,4 @@
 <?php
-
     include_once './includes/db.inc.php';
     $sql = "SELECT * FROM tb_survey WHERE project_id = :projectid";
     $statement = $dbh->prepare($sql);
@@ -8,27 +7,20 @@
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 	if( $result == NULL ){
-        echo "<h4 class='center'>There is not results to display for this survey.</h4>";
+        echo "<h4 class='center'>There is no results to display for this survey.</h4>";
     }else{
-
-    echo "<table><tr>
-     <th><h4>Survey Name</h4></th>
-     <th><h4>Start Date</h4></th>
-     <th><h4>End Date</h4></th>
-     <th><h4> </h4></th>
-   </tr>";
 
     foreach ($result as $row) {
       echo
         "<tr>
-          <td><h6>". $row['survey_name'] . "</h6></td>
-          <td><h6 class='center'>". $row['start_date'] ."</h6></td>
-          <td><h6 class='center'>". $row['end_date'] ."</h6></td>
-          <td><button survey-id='" . $row['survey_id'] . "' class='delete btn' >Delete</button></td>
+          <td>" . $row['survey_name'] . "</td>
+          <td>" . $row['start_date'] . "</td>
+          <td>" . $row['end_date'] . "</td>
+          <td><button project-id='" . $_SESSION['projectid'] . "' survey-id='" . $row['survey_id'] . "' class='qr-code btn'>QR Code</button></td>
+          <td><button survey-id='" . $row['survey_id'] . "' class='show-results btn'>Results</button></td>
+          <td><button survey-id='" . $row['survey_id'] . "' class='delete-survey btn'>Delete</button></td>
         </tr>";
       }
-
-    echo "</table>";
     }
 
     //Closing DB Connection

@@ -11,11 +11,12 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
     <!--Project CSS-->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
+    
   </head>
-  <body class="valign-wrapper">
-    <div class="container valign" ng-view>
+  <body>
+    <div class="container" ng-view>
 
-        <!--Content Goes Here-->
 
     </div>
   <!--jQuery JS-->
@@ -33,7 +34,7 @@
   <script>
     $(document).ready(function(){
       var windowHeight = $(window).height();
-      $('body').css('height', windowHeight);
+      $('.esti').css('height', windowHeight);
     });
   </script>
   </body>

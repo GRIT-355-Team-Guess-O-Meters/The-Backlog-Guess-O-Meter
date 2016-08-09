@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Cinzel:900' rel='stylesheet' type='text/css'>
     <!--Project CSS-->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
   </head>
   <body>
     <?php
